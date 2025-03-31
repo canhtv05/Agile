@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -20,11 +21,19 @@ public class CategoryController {
 
     CategoryService categoryService;
 
-    @GetMapping("/")
+    @GetMapping
     public ApiResponse<List<CategoryResponse>> findAll() {
         List<CategoryResponse> categories = categoryService.findAll();
-        ApiResponse<List<CategoryResponse>> response = new ApiResponse<>();
-        response.setData(categories);
-        return response;
+        return ApiResponse.<List<CategoryResponse>>builder()
+                .data(categories)
+                .build();
+    }
+
+    @GetMapping("/search")
+    public ApiResponse<List<CategoryResponse>> findAllByCategoryName(@RequestParam(value = "q", required = false) String query) {
+        List<CategoryResponse> categories = categoryService.findAllByCategoryName(query);
+        return ApiResponse.<List<CategoryResponse>>builder()
+                .data(categories)
+                .build();
     }
 }
