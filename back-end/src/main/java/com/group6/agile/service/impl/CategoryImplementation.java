@@ -27,4 +27,11 @@ public class CategoryImplementation implements CategoryService {
                 .map(categoryMapper::toCategoryResponse)
                 .toList();
     }
+
+    @Override
+    public List<CategoryResponse> findAllByCategoryName(String categoryName) {
+        return categoryRepository.findAllByNameContainingIgnoreCase(categoryName).stream()
+                .map(categoryMapper::toCategoryResponse)
+                .toList();
+    }
 }
