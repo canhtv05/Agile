@@ -91,6 +91,55 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "search product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxOGVkZTM5OS0wZmZjLTQ4YWYtYTlhMS04ZjFjOGJmY2ZjN2YiLCJpc3MiOiJjYW5odHYwNSIsImV4cCI6MTc0MzUyNjk4MCwiaWF0IjoxNzQzNTIzMzgwLCJlbWFpbCI6ImNhbmgxMUBnbWFpbC5jb20iLCJqdGkiOiI5Y2MwMDQ0Yy05MDU1LTQyZDQtOWY0My0yZTk0OGU2NWZmNTgifQ.UlNU3e1SYIohBm1ts_5uNzRz_uTQRGoDPgBC9fnxZ64",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products?categoryId=cat1&sortBy=price&sortOrder=asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "cat1"
+								},
+								{
+									"key": "sortBy",
+									"value": "price"
+								},
+								{
+									"key": "sortOrder",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
