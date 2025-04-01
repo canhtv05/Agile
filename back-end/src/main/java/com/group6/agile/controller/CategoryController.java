@@ -2,14 +2,13 @@ package com.group6.agile.controller;
 
 import com.group6.agile.dto.ApiResponse;
 import com.group6.agile.dto.response.CategoryResponse;
+import com.group6.agile.entity.Category;
 import com.group6.agile.service.CategoryService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -36,4 +35,21 @@ public class CategoryController {
                 .data(categories)
                 .build();
     }
+    @PostMapping("/create")
+    public ResponseEntity<CategoryResponse> create(@RequestBody Category categoryRequest){
+        return ResponseEntity.ok(categoryService.create(categoryRequest));
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<CategoryResponse> update(@PathVariable("id")String id,@RequestBody Category categoryRequest){
+        return ResponseEntity.ok(categoryService.update(id,categoryRequest));
+    }
+    @DeleteMapping("/delete/{id}")
+    ResponseEntity<String> delete(@PathVariable("id") String id){
+        return categoryService.delete(id);
+    }
+
+
+
 }
+

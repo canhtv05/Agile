@@ -20,6 +20,6 @@ public class ProductDetailServiceImpl implements ProductDetailService {
     public List<ProductDetailResponse> getALl(){
         List<ProductDetail> productDetails = productDetailRepository.findAll();
         return productDetails.stream().map(p->productDetailMapper.toProductDetailResponse(p))
-                .collect(Collectors.toUnmodifiableList());
+                .collect(Collectors.toList());
     }
 }
