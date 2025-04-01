@@ -11,7 +11,6 @@ import java.time.Instant;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ProductResponse {
-
     private String id;
     private String name;
     private String description;

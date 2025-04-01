@@ -34,7 +34,7 @@ public class TokenProvider {
     static final String ISSUER = "canhtv05";
 
     final JwtUtil jwtUtil;
-    final RedisService redisService;
+//    final RedisService redisService;
 
 
     public String generateAccessToken(User user) {
@@ -86,9 +86,9 @@ public class TokenProvider {
                 throw new AppException(ErrorCode.UNAUTHORIZED);
             }
 
-            if (StringUtils.isNotBlank(redisService.get(signedJWT.getJWTClaimsSet().getJWTID()))) {
-                throw new AppException(ErrorCode.TOKEN_BLACKLISTED);
-            }
+//            if (StringUtils.isNotBlank(redisService.get(signedJWT.getJWTClaimsSet().getJWTID()))) {
+//                throw new AppException(ErrorCode.TOKEN_BLACKLISTED);
+//            }
             return signedJWT;
         } catch (ParseException | JOSEException e) {
             throw new AppException(ErrorCode.UNAUTHORIZED);

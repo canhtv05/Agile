@@ -14,7 +14,7 @@ import java.util.Set;
 @Setter
 @Builder
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Order extends AbstractEntity<String> implements Serializable {
 

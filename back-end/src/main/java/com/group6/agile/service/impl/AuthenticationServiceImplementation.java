@@ -40,7 +40,7 @@ public class AuthenticationServiceImplementation implements AuthenticationServic
     TokenProvider tokenProvider;
     AuthenticationManager authenticationManager;
     JwtUtil jwtUtil;
-    RedisService redisService;
+//    RedisService redisService;
 
     @Override
     public LoginResponse login(AuthenticationRequest request, HttpServletResponse response) {
@@ -95,7 +95,7 @@ public class AuthenticationServiceImplementation implements AuthenticationServic
                 String jwtId = tokenProvider.verifyToken(accessToken).getJWTClaimsSet().getJWTID();
 
                 long ttl = accessTokenExpired - currentTime;
-                redisService.save(jwtId, accessToken, ttl, TimeUnit.MILLISECONDS);
+//                redisService.save(jwtId, accessToken, ttl, TimeUnit.MILLISECONDS);
 
                 user.setRefreshToken(null);
                 userRepository.save(user);

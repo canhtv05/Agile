@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "3a84248c-877a-483d-ba8f-a0f91c0f3dc5",
+		"name": "khanh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38292775"
+	},
+	"item": [],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"[\r",
+					"    {\r",
+					"        \"productName\": \"Áo thun nam\",\r",
+					"        \"imageUrl\": \"http://example.com/ao1.jpg\",\r",
+					"        \"colorName\": \"xanh\",\r",
+					"        \"sizeName\": \"L\",\r",
+					"        \"price\": 100000,\r",
+					"        \"stockQuantity\": 22,\r",
+					"        \"soldQuantity\": 3\r",
+					"    },\r",
+					"    {\r",
+					"        \"productName\": \"Áo thun nữ\",\r",
+					"        \"imageUrl\": \"http://example.com/ao2.jpg\",\r",
+					"        \"colorName\": \"Đỏ\",\r",
+					"        \"sizeName\": \"X\",\r",
+					"        \"price\": 100000,\r",
+					"        \"stockQuantity\": 44,\r",
+					"        \"soldQuantity\": 4\r",
+					"    },\r",
+					"    {\r",
+					"        \"productName\": \"Áo thun nam\",\r",
+					"        \"imageUrl\": \"http://example.com/ao3.jpg\",\r",
+					"        \"colorName\": \"Đỏ\",\r",
+					"        \"sizeName\": \"L\",\r",
+					"        \"price\": 100000,\r",
+					"        \"stockQuantity\": 55,\r",
+					"        \"soldQuantity\": 23\r",
+					"    }\r",
+					"]"
+				]
+			}
+		}
+	]
+}
