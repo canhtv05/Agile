@@ -10,6 +10,11 @@ const routes = [
         component: () => import('@/views/pages/ProductDetail.vue'),
     },
     {
+        path: '/product-detail2', // Thêm :id để hỗ trợ dynamic param
+        name: 'ProductDetail2',
+        component: () => import('@/views/pages/ProductDetail2.vue'),
+    },
+    {
         path: '/product-categories', // Thêm :id để hỗ trợ dynamic param
         name: 'ProductCategories',
         component: () => import('@/views/pages/ProductCategories.vue'),
