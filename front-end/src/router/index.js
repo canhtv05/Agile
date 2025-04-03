@@ -30,6 +30,16 @@ const routes = [
         component: () => import('@/views/pages/CategoryManagement.vue'),
     },
     {
+        path: '/product', // Thêm :id để hỗ trợ dynamic param
+        name: 'product',
+        component: () => import('@/views/pages/Product.vue'),
+    },
+    {
+        path: '/payment', // Thêm :id để hỗ trợ dynamic param
+        name: 'payment',
+        component: () => import('@/views/pages/Payment.vue'),
+    },
+    {
         path: '/',
         name: 'Home',
         component: DefaultLayout,
