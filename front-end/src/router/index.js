@@ -30,6 +30,11 @@ const routes = [
         component: () => import('@/views/pages/CategoryManagement.vue'),
     },
     {
+        path: '/admin/products',
+        name: 'AdminProductManager',
+        component: () => import('@/views/pages/AdminProductManager.vue'),
+    },
+    {
         path: '/',
         name: 'Home',
         component: DefaultLayout,
