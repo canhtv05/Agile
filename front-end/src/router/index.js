@@ -35,6 +35,11 @@ const routes = [
         component: () => import('@/views/pages/AdminProductManager.vue'),
     },
     {
+        path: '/review',
+        name: 'ReviewPanel',
+        component: () => import('@/views/pages/ReviewPanel.vue'),
+    },
+    {
         path: '/',
         name: 'Home',
         component: DefaultLayout,
