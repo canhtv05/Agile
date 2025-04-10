@@ -12,6 +12,7 @@ public enum ErrorCode {
     UNAUTHORIZED(401, "Unauthenticated: Invalid or expired JWT token.", HttpStatus.UNAUTHORIZED),
     FORBIDDEN(403, "You don't have permission.", HttpStatus.FORBIDDEN),
     BAD_REQUEST(400, "Invalid request.", HttpStatus.BAD_REQUEST),
+    CANNOT_SEND_EMAIL(400, "Cannot send email", HttpStatus.BAD_REQUEST),
 
     INVALID_KEY(400, "Invalid key.", HttpStatus.BAD_REQUEST),
     INVALID_TOKEN(400, "Invalid token.", HttpStatus.BAD_REQUEST),
